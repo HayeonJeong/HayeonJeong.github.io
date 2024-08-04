@@ -679,8 +679,10 @@ $btn-mb: 0.5rem;
   overflow-y: auto;
   width: $sidebar-width;
   z-index: 99;
-  background: var(--sidebar-bg);
-  border-right: 1px solid var(--sidebar-border-color);
+  // background: var(--sidebar-bg);
+  background: url(https://github.com/user-attachments/assets/3a83eae7-41a7-48a0-83a6-f82174782338);
+  background-size: auto;
+  background-position: center;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
@@ -774,27 +776,46 @@ $btn-mb: 0.5rem;
 
         &:hover {
           background-color: var(--sidebar-hover-bg);
+          span {
+            opacity: 1;
+            color: rgba(241, 241, 241, 0.99);
+          }
+          i {
+            font-size: 100%;
+            opacity: 1;
+            margin-right: 1.5rem;
+            color: rgba(241, 241, 241, 0.99);
+          }
         }
 
         i {
-          font-size: 95%;
-          opacity: 0.8;
+          font-size: 100%;
+          opacity: 1;
           margin-right: 1.5rem;
+          color: rgba(222, 222, 222, 0.99);
         }
 
         span {
           font-size: 90%;
           letter-spacing: 0.2px;
+          color: rgba(222, 222, 222, 0.99);
         }
       }
 
       &.active {
         .nav-link {
-          color: var(--sidebar-active-color);
+          color: rgba(255, 255, 255, 0.99);
           background-color: var(--sidebar-hover-bg);
 
           span {
             opacity: 1;
+            color: rgba(255, 255, 255, 0.99);
+          }
+          i {
+            font-size: 100%;
+            opacity: 1;
+            margin-right: 1.5rem;
+            color: rgba(222, 222, 222, 0.99);
           }
         }
       }
