@@ -7,12 +7,13 @@ date: 2024-08-07 14:00:00 +09:00
 개인 정보 동의서를 넣으면 키워드 중심으로 요약해주는 sLLM 학습.
 일정 수준 성능 달성 시 사전에 명시한 개인정보 공개 범위를 기준으로 알아서 판단하는 sLLM 학습이 궁극적인 목표.
 
-# 1. sLLM 모델 선정
+# 실험 과정
+## 1. sLLM 모델 선정
 - Llama 7B를 사용하려다가...
 - huggingface sLLM leaderboard에 tinyllama가 있길래
 - TinyLlama-chat 모델로 선정 (그냥 TinyLlama 모델은 text generation task)
 
-# 2. GPT2 --(knowledge distillation)--> TinyLlama-chat
+## 2. GPT2 --(knowledge distillation)--> TinyLlama-chat
 - GPT-4o랑 같이 코드 짜고 돌렸는데 **'텐서 크기 불일치' 오류** 발생
     - KLDivLoss를 계산할 때 두 로짓의 크기가 불일치.
     - 이는 두 모델의 vocabulary 크기가 다르기 때문에 발생.

@@ -3,20 +3,20 @@ title: Knowledge Distillation 개념
 date: 2024-08-06 14:00:00 +09:00
 ---
 
-# Knowledge Distillation
+# 0. Knowledge Distillation
 : 딥러닝 모델의 지식 증류 기법
 - 지식을 증류한다: 학습된 모델로부터 지식을 추출.
 
-## 1. Knowledge Distillation가 등장한 이유
+# 1. Knowledge Distillation가 등장한 이유
 - 모델 배포할 때, 정확도 높은데 오래걸리는 모델보다 정확도 낮지만 엄청 빠른 모델이 배포 측면에서는 더 좋음.
 - 그럼 복잡한 모델이 학습한 generalization 능력을 단순한 모델에 전달해주면 되지 않을까?
 - teacher model -> student model
 
-## 2. Knowledge Distillation은 언제 처음 나왔나?
+# 2. Knowledge Distillation은 언제 처음 나왔나?
 - Distilling the Knowledge in a Neural Network, NIPS workshop, 2014
 
-## 3-1. Knowledge Distillation은 어떻게? (w/ Hinton’s KD)
-### 1) soft label
+# 3-1. Knowledge Distillation은 어떻게? (w/ Hinton’s KD)
+## 1) soft label
 image classification 마지막 softmax 레이어 수식 (i번째 클래스에 대한 확률값):
 $$
 q_i = \frac{\exp(z_i)}{\sum_j \exp(z_j)}
@@ -38,7 +38,7 @@ Ex:
 - soft output = dark knowledge
 ![image](https://github.com/user-attachments/assets/7507a593-5ac9-4147-ba64-6a01f7bc244a)
 
-### 2) distillation loss
+## 2) distillation loss
 ![image](https://github.com/user-attachments/assets/004ccfd9-8aa2-428d-be9e-4dad53818990)
 $$
 L = \sum_{(x,y) \in D} L_{KD}(S(x, \theta_S, \tau), T(x, \theta_T, \tau)) + \lambda L_{CE}(\hat{y}, y)
@@ -48,13 +48,13 @@ $$
     - $\tau$: 동일하게 설정하고 Cross Entropy Loss를 사용
 - $L_{CE}$: 기존 이미지 분류에서 사용하는 Cross Entropy Loss
 
-### 3) Summary
+## 3) Summary
 1. Teacher Network 학습
 2. Student Network 학습
     - Student Network soft prediction + Teacher Network soft label → distillation loss 구성
     - Student Network (hard) prediction + Original (hard) label → classification loss 구성
 
-## 3-2. Knowledge Distillation은 어떻게? (GPT로 설명)
+# 3-2. Knowledge Distillation은 어떻게? (GPT로 설명)
 - GPT는 input seq이 주어졌을 때 바로 다음 단어로 올 단어들의 확률을 맞추는 방법으로 학습함.
     - 입력값: 토큰의 시퀀스
     - 예측할 출력값: 다음에 올 단어의 one-hot-vector
@@ -70,6 +70,6 @@ $$
 - 전체 모델의 동작 구조
     ![image](https://github.com/user-attachments/assets/7e61b2d5-1457-451a-9555-2ba6e638ae1c)
 
-## Reference
+## Referenceㄴ
 - https://baeseongsu.github.io/posts/knowledge-distillation/
 - https://tilnote.io/pages/6480a73ee92fe5ef635f4d77
