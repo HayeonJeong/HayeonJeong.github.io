@@ -14,7 +14,10 @@ date: 2024-08-10 01:45:00 +09:00
 # 해결 방법
 이 해결 방법은 한 번의 복붙으로 평생의 귀찮음과 용량 부족 문제를 해결할 수 있다.
 
-[깃허브 이슈 추가 링크](https://github.com/HayeonJeong/HayeonJeong/issues/new)
+<a href="https://github.com/HayeonJeong/HayeonJeong/issues/new" style="color: blue; text-decoration: underline;">
+깃허브 이슈 추가 링크
+</a>
+
 
 위 링크는 내 깃허브의 한 repository에서 issue를 추가하는 페이지이다.
 
