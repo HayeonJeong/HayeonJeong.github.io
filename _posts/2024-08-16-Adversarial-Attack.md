@@ -34,20 +34,21 @@ date: 2024-08-16 21:31:00 +09:00
     - 하나의 입력 이미지에 대해 적대적 예제를 생성하는 과정
     - 주어진 이미지에 대해 반복적으로 적대적 노이즈를 추가하여 모델의 예측을 변경하는 데 사용
 
-- PGD 수식 설명
+- PGD 수식 의미 설명
     
     <img width="100" alt="image" src="https://github.com/user-attachments/assets/068fefb3-03de-41c5-84ca-b80ef6538ffd">
     
-    : adversarial example이 original class로 분류되도록 학습됨.
+    - adversarial example이 original class로 분류되도록 학습됨.
 
     <img width="500" alt="image" src="https://github.com/user-attachments/assets/4f8a7720-7866-441d-b02b-545b0bc20fad">
 
-    : perturbation이 포함된 'x + perturbation'과 original image 사이의 손실을 최대화 하는 방향으로 만드는 adversarial example.
+    - perturbation이 포함된 'x + perturbation'과 original image 사이의 손실을 최대화 하는 방향으로 만드는 adversarial example.
 
     <img width="400" alt="image" src="https://github.com/user-attachments/assets/82b3911c-c942-4202-a254-898aa4375701">
 
-    : 업데이트 된 방향이 주어진 범위 S 내에서 유지되도록 projection 함 (epsilon 거리 안에서 적대적 예제를 생성함)
+    - 업데이트 된 방향이 주어진 범위 S 내에서 유지되도록 projection 함 (epsilon 거리 안에서 적대적 예제를 생성함)
 
+- PGD 수식 기호 설명
     - x_t: 현재 단계 t에서의 이미지
     - x_{t+1}: 다음 단계에서의 업데이트된 이미지
     기울기 계산: ∇𝑥𝐽(𝜃,𝑥_𝑡,𝑦)는 현재 이미지 𝑥_𝑡에 대한 손실 함수 𝐽의 기울기
