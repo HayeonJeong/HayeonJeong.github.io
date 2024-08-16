@@ -62,7 +62,9 @@ date: 2024-08-16 21:31:00 +09:00
 
 - 모델이 목표 클래스로 잘못 분류하도록 만드는 최소한의 변화를 찾음.
     - 주로 targeted attack에 사용.
+
 - 입력 데이터를 조정할 때, 최적화 알고리즘(즉, BFGS)을 사용해 공격을 수행.
+
 ---
 <img width="378" alt="image" src="https://github.com/user-attachments/assets/b70fac24-4751-4464-bebb-ac72a30a8237">
 
@@ -75,7 +77,9 @@ date: 2024-08-16 21:31:00 +09:00
 ### 2) DeepFool
 - 제안된 논문: DeepFool: A Simple and Accurate Method to Fool Deep Neural Networks (CVPR, 2016)
 - DeepFool은 모델의 결정 경계를 넘는 최소한의 변화(perturbation)를 찾아서 입력 이미지를 변형하는 공격 방법
+
 - 비선형 분류기를 점진적으로 선형 근사해서, 가장 가까운 결정 경계를 넘도록 입력 데이터를 변형함
+
 ---
 <img width="220" alt="image" src="https://github.com/user-attachments/assets/882e7770-6a73-4d0e-89df-dd6b62480d27">
 
