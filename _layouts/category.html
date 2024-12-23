@@ -1,6 +1,7 @@
 ---
 layout: page
-# The Category layout
+title: Category
+# the layout for displaying category-specific content
 ---
 
 {% include lang.html %}
@@ -13,7 +14,7 @@ layout: page
   </h1>
 
   <ul class="content ps-0">
-    {% for post in page.posts %}
+    {% for post in site.categories[page.category] %}
       <li class="d-flex justify-content-between px-md-3">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <span class="dash flex-grow-1"></span>
