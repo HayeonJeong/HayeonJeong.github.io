@@ -1,5 +1,5 @@
 ---
-title: "[AAA] About Adversarial Attack (논문 별 공격 기법 정리)"
+title: "About Adversarial Attack (논문 별 공격 기법 정리)"
 date: 2024-08-16 21:31:00 +09:00
 ---
 ## 1. What is Adversarial Attack?
@@ -94,6 +94,17 @@ date: 2024-08-16 21:31:00 +09:00
 - 모델의 최종 로짓(logit) 값(소프트맥스 함수 이전의 값)을 기반으로 공격을 수행
 - PGD와 유사하지만, 입력 데이터를 수정할 때 손실 함수 대신 로짓 값의 변화에 집중함.
 - 특정 클래스의 확률을 높이는 데 효과적임.
+
+## 5. 제안된 순서
+
+1. L-BFGS
+2. FGSM
+3. DeepFool
+4. PGD
+5. LS-PGA
+6. Jacobian-based saliency map
+7. small patch at a fixed location of the image
+...
 
 ---
 <img width="342" alt="image" src="https://github.com/user-attachments/assets/00bbd7c8-3147-446c-a4c6-b30147289c29">
