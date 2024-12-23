@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Category
-# the layout for displaying category-specific content
+# The Category layout
 ---
 
 {% include lang.html %}
@@ -10,11 +9,11 @@ title: Category
   <h1 class="ps-lg-2">
     <i class="far fa-folder-open fa-fw text-muted"></i>
     {{ page.title }}
-    <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
+    <span class="lead text-muted ps-2">{{ site.categories[page.title] | size }}</span>
   </h1>
 
   <ul class="content ps-0">
-    {% for post in site.categories[page.category] %}
+    {% for post in site.categories[page.title] %}
       <li class="d-flex justify-content-between px-md-3">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <span class="dash flex-grow-1"></span>
