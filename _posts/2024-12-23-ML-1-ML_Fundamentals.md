@@ -2,6 +2,7 @@
 title: "[ML, kor] ML Fundamentals (기계학습 기초)"
 categories: ML
 date: 2024-12-23 17:40:00 +09:00
+mathjax: true
 ---
 ```Python
 [1] ML Core Concepts & Optimization
