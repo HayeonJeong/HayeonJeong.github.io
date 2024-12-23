@@ -25,7 +25,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://hayeonjeong.github.io/"
+url: "https://hayeonjeong.github.io"
 
 github:
   username: hayeonjeong # change to your GitHub username
@@ -155,7 +155,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
-    # default_lang: console
+    default_lang: en
     span:
       line_numbers: false
     block:
